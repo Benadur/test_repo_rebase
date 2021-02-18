@@ -1,0 +1,9 @@
+izlude,133,135,5	script	mapmoblist	85,{
+	input .@map$;
+	mapmoblist( .@map$ );
+	dispbottom .@map$;
+	.@size = getarraysize( .@mapmob_count );
+	for ( .@i = 0; .@i < .@size; .@i++ )
+		dispbottom .@mapmob_id[.@i] +": name ("+ strmobinfo(1,.@mapmob_id[.@i]) +") / "+ .@mapmob_count[.@i];
+	end;
+}
